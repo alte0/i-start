@@ -3,5 +3,5 @@ return [
   "urlDB" => "127.0.0.1",
   "userDB" => "root",
   "passwordDB" => "root",
-  "nameDB" => "feedback-bd"
+  "nameDB" => "feedback_bd"
 ];
