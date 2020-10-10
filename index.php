@@ -43,9 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
   if (!count($errorsForm)) {
     if (addFeedback($linkDB, $feedback)) {
-      $succesForm =  true;
+      header("Location: ${_SERVER['PHP_SELF']}?send=ok");
     }
   }
+}
+
+if (isset($_GET['send']) && $_GET['send'] === 'ok') {
+  $succesForm = true;
 }
 
 $content = include_template('add-feedback', [
